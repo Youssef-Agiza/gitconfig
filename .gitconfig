@@ -1,0 +1,16 @@
+[user]
+	name = Youssef Agiza
+	email = youssefagiza@aucegypt.edu
+[core]
+	edit = code --wait
+[color]
+	ui = true
+[alias]
+	logg = log --all --oneline --decorate --graph
+	st = status
+	ch = checkout
+	cma = commit -a
+	ci = commit
+	br = branch
+	aa = add --all
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
