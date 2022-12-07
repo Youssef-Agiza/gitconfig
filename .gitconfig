@@ -6,7 +6,6 @@
 [color]
 	ui = true
 [alias]
-
 	logg = log --all --oneline --decorate --graph
 	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
 
@@ -32,4 +31,11 @@
 	unstage = reset HEAD -- 
 	undo = reset --mixed HEAD~1
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 
